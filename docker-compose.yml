@@ -2,9 +2,9 @@ services:
   db:
     image: postgres:latest
     environment:
-      POSTGRES_DB: exampledb
-      POSTGRES_USER: exampleuser
-      POSTGRES_PASSWORD: examplepass
+      POSTGRES_DB: db
+      POSTGRES_USER: amir
+      POSTGRES_PASSWORD: amir
     volumes:
       - db_data:/var/lib/postgresql/data
 

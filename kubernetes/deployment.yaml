@@ -1,0 +1,30 @@
+# Define a Deployment resource
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Name of the deployment
+  name: flask-app
+  labels:
+    # Label to identify the deployment
+    app: flask-app
+spec:
+  # Number of replicas (pods) to run
+  replicas: 2
+  selector:
+    matchLabels:
+      # Label to match pods with this deployment
+      app: flask-app
+  template:
+    metadata:
+      labels:
+        # Label for the pods created by this deployment
+        app: flask-app
+    spec:
+      containers:
+      - # Name of the container
+        name: flask-app
+        # Docker image to use for the container
+        image: AmirBargaoui/flask-app:latest
+        ports:
+        - # Port to expose from the container
+          containerPort: 5000

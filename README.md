@@ -31,7 +31,7 @@ devops-portfolio-project/
 First, clone the repository to your local machine:
 
 ```sh
-git clone https://gitlab.com/your-username/devops-portfolio-project.git
+git clone https://gitlab.com/AmirBargaoui/FlaskDeployPipeline.git
 cd devops-portfolio-project
 ```
 
@@ -56,8 +56,8 @@ Open your browser and navigate to `http://localhost:5000` to see the application
 Tag the Docker image with your Docker Hub username and push it to Docker Hub:
 
 ```sh
-docker tag flask-app your-dockerhub-username/flask-app:latest
-docker push your-dockerhub-username/flask-app:latest
+docker tag flask-app amirbargaoui/flask-app:latest
+docker push amirbargaoui/flask-app:latest
 ```
 
 ### 4. Deploy to Kubernetes
@@ -73,7 +73,7 @@ kubectl apply -f kubernetes/service.yaml
 
 1. Create a new project in GitLab and push your repository.
 2. In your GitLab project, go to **Settings > CI / CD > Variables** and add the following variables:
-   - `CI_REGISTRY_IMAGE`: Your Docker registry image name (e.g., `registry.gitlab.com/your-username/devops-portfolio-project`)
+   - `CI_REGISTRY_IMAGE`: Your Docker registry image name (e.g., `registry.gitlab.com/amirbargaoui/FlaskDeployPipeline`)
 
 ### 6. Trigger the Pipeline
 

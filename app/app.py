@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Define the root route that returns 'Hello, World!' when accessed
 @app.route('/')
 def hello_world():
-    return 'Hello, Developer! Keep Coding!'
+    return 'Hello, this is my first Devops project!'
 
 # Define an API endpoint at /api/data that returns a JSON response
 @app.route('/api/data', methods=['GET'])
